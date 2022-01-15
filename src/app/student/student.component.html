@@ -1,0 +1,27 @@
+<p>Student Details</p>
+
+<input type="text" #Name placeholder="name">
+<input type="number" #Roll placeholder="roll">
+<input type="number" #Age placeholder="age">
+<input type="number" #Marks placeholder="marks">
+
+<br><br>
+<table border="1">
+   <tr>
+    <td>Name</td><br>
+    <td>Roll</td><br>
+    <td>Age</td><br>
+    <td>Marks</td><br>
+       </tr>
+    <tr *ngFor="let S of Student">
+    <td>{{S.name}}</td><br>
+    <td>{{S.roll}}</td><br>
+    <td>{{S.age}}</td><br>
+    <td>{{S.marks}}</td><br>
+</tr>
+
+</table>
+
+
+<br><br>
+<button (click)="process(Name,Roll,Age,Marks)">Add</button>

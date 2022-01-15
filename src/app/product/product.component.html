@@ -1,0 +1,42 @@
+<!-- <p>Product Details</p> -->
+
+
+<input type="text" #Name placeholder="name">
+<input type="number" #Price placeholder="price">
+<input type="text" #Company placeholder="company">
+<select #Image>
+   <option value="img.jpg">Image1</option>
+   <option value="img2.jpeg">Image2</option>
+</select>
+
+<br><br>
+<table border="1">
+   <tr>
+  
+    <td>Product Name</td><br>
+    <td>Price</td><br>
+    <td>Company</td><br>
+    <td>Image</td><br>
+    <td>Operation</td><br>
+       </tr>
+    <tr *ngFor="let P of Product">
+     
+    
+    <td>{{P.name}}</td><br>
+    <td>{{P.price}}</td><br>
+    <td>{{P.company}}</td><br>
+    <td><img src="/assets/img/{{P.image}}" height="140vh"></td><br>
+    <br>
+    <select #Image>
+      <option value="img.jpg">Image1</option>
+      <option value="img2.jpeg">Image2</option>
+   </select>&nbsp;
+ <!--   <button (click)="updateImage(P,ImageUpdate)">Change</button> -->
+    <button (click)="delete(P)">Delete</button>
+</tr>
+
+</table>
+
+
+<br><br>
+<button (click)="process(Name,Price,Company,Image)">Add Product</button>

@@ -1,0 +1,26 @@
+<!-- <h1>Product Dashboard</h1>
+
+<!-- <app></app> -->
+<!-- <app-addproduct></app-addproduct> 
+<hr>
+<app-login></app-login>
+<hr>
+<app-student></app-student>
+<hr>
+<br><br> 
+<app-product></app-product> -->
+
+<h1>App Component</h1>
+
+<form #frm="ngForm" (submit)="send(frm)">
+    <input type='text' name="roll" ngModel placeholder="Roll">
+    <input type='text' name="name" ngModel placeholder="Name">
+    <input type='number' name="age" ngModel placeholder="Age">
+    <button type='submit'>Send</button>
+</form>
+<hr>
+
+<app-studentapp *ngFor="let ob of students" [student]="ob"
+(delStud)="deleteStudent($event)">
+
+</app-studentapp>
